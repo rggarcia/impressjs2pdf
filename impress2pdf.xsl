@@ -15,7 +15,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 This software has been modified by Ramon Gonzalez (https://github.com/rggarcia/impressjs2pdf)
 
-Usage:
+If you have Apache FOP installed on your system, you can execute:
 
 fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf 
 
@@ -487,7 +487,8 @@ fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf
                         margin-bottom="{$page-margin-bottom}"
                         margin-left="{$page-margin-left}"
                         column-count="{$column-count}"
-                        column-gap="{$column-gap}"/>
+                        column-gap="{$column-gap}"
+			display-align="center"/>
         <xsl:choose>
           <xsl:when test="$writing-mode = 'tb-rl'">
             <fo:region-before extent="{$page-margin-right}"
