@@ -11,6 +11,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 -->
 
+<!--
+
+This software has been modified by Ramon Gonzalez (https://github.com/rggarcia/impressjs2pdf)
+
+Usage:
+
+fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf 
+
+-->
+
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:fo="http://www.w3.org/1999/XSL/Format"
@@ -841,6 +851,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         </fo:block>
       </xsl:otherwise>
     </xsl:choose>
+    <xsl:if test="./@class='step'">
+      <fo:block break-after="page"></fo:block>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template name="need-block-container">
