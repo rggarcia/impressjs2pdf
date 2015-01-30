@@ -14,6 +14,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!--
 
 This software has been modified by Ramon Gonzalez (https://github.com/rggarcia/impressjs2pdf)
+for using it to convert impress.js presentations (must be written using xhtml) to pdf.
 
 If you have Apache FOP installed on your system, you can execute:
 
