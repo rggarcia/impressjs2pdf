@@ -1585,34 +1585,34 @@ By default the attributes of the img tag specified in the xhtml file are used to
       </xsl:attribute>
     </xsl:if>
     <xsl:if test="$image-size != 'original'">
-    <xsl:if test="@width">
-      <xsl:choose>
-        <xsl:when test="contains(@width, '%')">
-          <xsl:attribute name="width">
-            <xsl:value-of select="@width"/>
-          </xsl:attribute>
-          <xsl:attribute name="content-width">scale-to-fit</xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:attribute name="content-width">
-            <xsl:value-of select="@width"/>px</xsl:attribute>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
-    <xsl:if test="@height">
-      <xsl:choose>
-        <xsl:when test="contains(@height, '%')">
-          <xsl:attribute name="height">
-            <xsl:value-of select="@height"/>
-          </xsl:attribute>
-          <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:attribute name="content-height">
-            <xsl:value-of select="@height"/>px</xsl:attribute>
-        </xsl:otherwise>
-      </xsl:choose>
-    </xsl:if>
+      <xsl:if test="@width">
+        <xsl:choose>
+          <xsl:when test="contains(@width, '%')">
+            <xsl:attribute name="width">
+              <xsl:value-of select="@width"/>
+            </xsl:attribute>
+            <xsl:attribute name="content-width">scale-to-fit</xsl:attribute>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:attribute name="content-width">
+              <xsl:value-of select="@width"/>px</xsl:attribute>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
+      <xsl:if test="@height">
+        <xsl:choose>
+          <xsl:when test="contains(@height, '%')">
+            <xsl:attribute name="height">
+              <xsl:value-of select="@height"/>
+            </xsl:attribute>
+            <xsl:attribute name="content-height">scale-to-fit</xsl:attribute>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:attribute name="content-height">
+              <xsl:value-of select="@height"/>px</xsl:attribute>
+          </xsl:otherwise>
+        </xsl:choose>
+      </xsl:if>
     </xsl:if>
     <xsl:if test="@border">
       <xsl:attribute name="border">
