@@ -17,7 +17,12 @@ This software has been modified by Ramon Gonzalez (https://github.com/rggarcia/i
 
 If you have Apache FOP installed on your system, you can execute:
 
-fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf 
+fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf [ -param image-size original ]
+
+Optional parameters:
+
+image-size:
+By default the attributes of the img tag specified in the xhtml file are used to set the dimensions of each image. Setting this paremeter to 'original' those attributes will be ignored and the dimenssions of the images will be set to their original sizes.
 
 -->
 
@@ -34,6 +39,8 @@ fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf
   <!--======================================================================
       Parameters
   =======================================================================-->
+
+  <xsl:param name="image-size">byparams</xsl:param>
 
   <!-- page size -->
   <xsl:param name="page-width">auto</xsl:param>
@@ -1577,6 +1584,7 @@ fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf
         <xsl:value-of select="@alt"/>
       </xsl:attribute>
     </xsl:if>
+    <xsl:if test="$image-size != 'original'">
     <xsl:if test="@width">
       <xsl:choose>
         <xsl:when test="contains(@width, '%')">
@@ -1604,6 +1612,7 @@ fop -xsl impress2pdf.xsl -xml file_name.xml -pdf file_name.pdf
             <xsl:value-of select="@height"/>px</xsl:attribute>
         </xsl:otherwise>
       </xsl:choose>
+    </xsl:if>
     </xsl:if>
     <xsl:if test="@border">
       <xsl:attribute name="border">
