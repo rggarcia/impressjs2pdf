@@ -340,7 +340,7 @@ By default the attributes of the img tag specified in the xhtml file are used to
   </xsl:attribute-set>
 
   <xsl:attribute-set name="th">
-    <xsl:attribute name="font-weight">bolder</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
     <xsl:attribute name="text-align">center</xsl:attribute>
     <xsl:attribute name="border">1px</xsl:attribute>
     <!--
@@ -362,14 +362,14 @@ By default the attributes of the img tag specified in the xhtml file are used to
   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-->
 
   <xsl:attribute-set name="b">
-    <xsl:attribute name="font-weight">bolder</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
   </xsl:attribute-set>
   <xsl:attribute-set name="strong">
-    <xsl:attribute name="font-weight">bolder</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
   </xsl:attribute-set>
 
   <xsl:attribute-set name="strong-em">
-    <xsl:attribute name="font-weight">bolder</xsl:attribute>
+    <xsl:attribute name="font-weight">bold</xsl:attribute>
     <xsl:attribute name="font-style">italic</xsl:attribute>
   </xsl:attribute-set>
 
