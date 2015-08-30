@@ -863,7 +863,7 @@ By default the attributes of the img tag specified in the xhtml file are used to
         </fo:block>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:if test="./@class='step'">
+    <xsl:if test="contains(./@class, 'step')">
       <fo:block break-after="page"></fo:block>
     </xsl:if>
   </xsl:template>
