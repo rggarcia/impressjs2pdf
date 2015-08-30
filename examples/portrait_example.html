@@ -1,0 +1,582 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+		window.addEventListener("impress:stepleave", function (event) {
+ 			document.getElementById("header").innerHTML="";
+	        }, false);
+		window.addEventListener("impress:stepenter", function (event) {
+			document.getElementById("header").innerHTML="- "+event.target.id.slice(5)+" -";
+		}, false);
+	</script>
+    <style>
+.step {
+	width: 1000px;
+	font-size: x-large;
+}
+
+		#header {
+			witdh:100%;
+			text-align:center;
+			color: gray;
+		}
+	</style>
+    <title>
+Instalación de Active Directory
+</title>
+  </head>
+  <body onload="impress().init();">
+    <script src="impress.js"></script>
+    <div id="header"></div>
+    <div id="impress">
+      <div class="step" data-x="1500" data-y="0" data-rotate="0">
+        <step>
+<h3>Ejemplo práctico de</h3>
+<h1 id="nodeTitle">Instalación y configuración del servicio de Directorio Activo.</h1>
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="0" data-rotate="45">
+        <step>
+<h2>Proceso de instalación.</h2>
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="0" data-rotate="90">
+        <step>
+Para poder obtener el máximo rendimiento de nuestro servidor <i>Windows Server
+2008</i> debemos convertirlo en un controlador de dominio primario.
+
+
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="0" data-rotate="90">
+        <step>
+<p align="justify">
+Para llevar a cabo el proceso descrito en el párrafo
+anterior, autenticados en el equipo "SERVIDOR" con las credenciales del usuario
+"Administrador", ejecutaremos <b>Inicio <span style="font-size: 11pt; line-height: 115%; font-family: 'Calibri','sans-serif';">→</span> Herramientas Administrativas <span style="font-size: 11pt; line-height: 115%; font-family: 'Calibri','sans-serif';">→</span> Administrador del servidor</b> del equipo "SERVIDOR" <i>Windows
+Server 2008</i>, y una vez en ella nos situaremos sobre el apartado <b>Funciones</b>
+ubicado en la zona superior izquierda de la misma, para a continuación hacer
+clic sobre el enlace <b>Agregar funciones</b> ubicado en la zona derecha de dicha
+ventana.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD02.jpg" height="456" width="637" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="1500" data-rotate="135">
+        <step>
+<p align="justify">
+Como resultado de la acción anterior se nos presentará la
+primera ventana del asistente de agregación de funciones del servidor, en la
+que activaremos la casilla <b>Omitir esta página de forma predeterminada</b>, y tras
+ello pulsaremos sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD03.jpg" height="470" width="624" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="1500" data-rotate="180">
+        <step>
+<p align="justify">
+A continuación se mostrará la siguiente ventana, en donde
+se detallan las funciones que podrá realizar nuestro equipo "SERVIDOR",
+activando en nuestro caso la casilla <b>Servicios de dominio de Active Directory</b>
+para configurar como controlador de dominio este equipo <i>Windows Server 2008</i>,
+tras lo cual pulsaremos sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD04.jpg" height="470" width="624" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="1500" data-rotate="225">
+        <step>
+<p align="justify">
+En la siguiente ventana se nos informa de las
+características de la función que estamos a punto de instalar, así como de los
+requisitos y configuraciones que precisamos para instalar el servicio
+correspondiente; en dicha ventana pulsaremos directamente sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD05.jpg" height="470" width="624" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="1500" data-rotate="225">
+        <step>
+<p align="justify">
+El asistente de instalación del servicio solicitado, nos
+informa de que está preparado para instalarlo con las configuraciones especificadas,
+así pues pulsaremos en dicha ventana sobre el botón <b>Instalar</b> para dar
+comienzo de modo efectivo al proceso de instalación.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD06.jpg" height="470" width="624" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="3000" data-rotate="270">
+        <step>
+<p align="justify">
+El proceso de instalación dará comienzo pues según lo
+previsto.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD07.jpg" height="470" width="624" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="3000" data-rotate="315">
+        <step>
+<p align="justify">
+Una vez concluido el proceso de instalación del servicio de
+dominio de <i>Active Directory</i>, se nos informa de que dicho proceso 
+se ha
+efectuado correctamente, y se nos comunica de que para completar la 
+instalación y configurar el servicio instalado deberemos ejecutar el 
+comando <b>dcpromo.exe</b> para promocionar el equipo
+"SERVIDOR" <i>Windows Server 2008</i> a controlador de dominio; cerraremos el
+asistente de instalación pulsando sobre el botón <b>Cerrar</b> en la ventana de la
+imagen inferior.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD08.jpg" height="470" width="624" />
+<br />
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="3000" data-rotate="360">
+        <step>
+<p align="justify">
+Llegados a este punto podremos dar por concluido este apartado, quedando aun pendiente la ejecución del comando <b>dcpromo</b> que llevaremos a cabo a continuación. <br />
+</p>
+<p align="justify"><br />
+</p>
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="3000" data-rotate="360">
+        <step>
+<h2>Proceso de configuración.</h2>
+
+<br />
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="4500" data-rotate="405">
+        <step>
+<div>
+De vuelta a la ventana de "Administrador del servidor",
+podremos comprobar que han sido instalados los <i>Servicios de dominio de
+Directorio Activo</i>, pero que dicha instalación aun no se ha completado en su
+totalidad, pues debemos ejecutar el comando <b>dcpromo.exe</b> para completar la
+correcta instalación de dicho servicio.
+</div>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD09.jpg" height="456" width="592" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="4500" data-rotate="450">
+        <step>
+<p align="justify">
+Así pues deberemos ir a <b>Inicio</b>, y tecleamos en la caja de texto
+de búsqueda el comando <b>dcpromo</b>, tal y como vemos en la ventana de la imagen
+inferior, y tras ello pulsamos sobre la tecla <b>ENTER</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD10.jpg" height="501" width="430" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="4500" data-rotate="495">
+        <step>
+<p align="justify">
+Como resultado de la acción anterior se ejecutará el
+asistente para la instalación de los servicios de dominio de <i>Active Directory</i>,
+en cuya primera ventana activaremos la casilla <b>Usar la instalación en modo
+avanzado</b>, tras lo cual pulsaremos sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD11.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="4500" data-rotate="495">
+        <step>
+<p align="justify">
+El asistente de instalación nos informará a continuación de
+los problemas de compatibilidad que pueden producirse si integramos este
+controlador de dominio con otros controladores de dominio que ya estuvieran instalados
+con versiones anteriores de servidores <i>Windows</i>; en nuestro caso obviaremos esta
+información, y pulsaremos directamente sobre el botón <b>Siguiente</b> en la ventana
+de la imagen inferior.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD12.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="6000" data-rotate="540">
+        <step>
+<p align="justify">
+En la siguiente ventana deberemos indicar al asistente
+si  el equipo "SERVIDOR" va a ser
+controlador de dominio de un bosque existente, o bien de un bosque nuevo,
+seleccionando en  nuestro caso esta
+segunda opción al activar el radio botón <b>Crear un dominio nuevo en un bosque
+nuevo</b>, y tras ello pulsaremos sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD13.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="6000" data-rotate="585">
+        <step>
+<p align="justify">
+En la siguiente ventana indicaremos el nombre que deseemos
+asignar al dominio que gestionará el equipo "SERVIDOR"; si disponemos de un
+dominio registrado en Internet, podemos hacer uso del mismo, y si no fuera así,
+que será lo más habitual, indicaremos un nombre de dominio ficticio para
+nuestro centro, opción por la que hemos optado en este caso, especificando <b>micentro.edu</b>
+como nombre del dominio que controlará nuestro equipo "SERVIDOR".
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD14.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="6000" data-rotate="630">
+        <step>
+<p align="justify">
+La siguiente ventana nos permite especificar un nombre
+<i>NetBIOS</i> para nuestro dominio, con el fin de que versiones anteriores de
+sistemas operativos <i>Windows</i>, como por ejemplo <i>Windows 98</i>, puedan hacer uso del
+dominio para, por ejemplo, poder identificar a usuarios desde dichos
+operativos; en nuestro caso dejaremos asociado el nombre de dominio <i>NetBIOS</i>
+ofrecido por defecto por el asistente, esto es <b>MICENTRO</b>, y
+pulsaremos directamente en dicha ventana sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD15.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="6000" data-rotate="630">
+        <step>
+<p align="justify">
+En la siguiente ventana debemos especificar si deseamos
+instalar este servicio con permisos compatibles con servidores anteriores de <i>Windows</i>
+(<i>Windows 2003 Server</i> o <i>Windows 2000 Server</i>) o no; en nuestro caso, y dado que
+no disponemos de ningún controlador de dominio instalado con ninguno de dichos sistemas
+operativos, en el desplegable "Nivel funcional del bosque" seleccionaremos <b>Windows Server 2008</b>, y tras ello pulsaremos sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD16.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="7500" data-rotate="675">
+        <step>
+<p align="justify">
+A
+continuación el asistente de instalación nos informa de que debemos disponer de
+un servidor DNS instalado para poder administrar el dominio "micentro.edu" que
+va a ser gestionado por el equipo "SERVIDOR", ofreciéndonos la posibilidad de
+instalarlo en este instante, cosa que debemos hacer, dejando marcada la opción correspondiente.<br />
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD17.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="7500" data-rotate="720">
+        <step>
+<p align="justify">Posteriormente
+el asistente nos permitirá indicar la ruta donde será almacenada la base de
+datos, el registro de <i>Active Directory</i> y la copia del servidor de los archivos
+públicos del dominio, dejando en nuestro caso asociada la ruta que por defecto
+nos ofrece el asistente de instalación, y pulsando directamente en la ventana
+de la imagen inferior sobre el botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD19.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="7500" data-rotate="765">
+        <step>
+<p align="justify">
+Posteriormente
+el asistente nos indica que debemos especificar una contraseña para poder
+acceder al equipo en modo <i>Restauración de servicios de Active
+Directory</i>, opción que ejecutaremos en su momento cuando tratemos el
+apartado relativo a restauración de las copias de seguridad del servidor;
+aunque podemos teclear la contraseña que deseemos, en nuestro caso indicaremos
+la misma contraseña que fue asociada al usuario "Administrador" del
+equipo "SERVIDOR", a fin de recordar una única contraseña para poder
+realizar toda la gestión de dicho equipo, tras lo cual pulsaremos sobre el
+botón <b>Siguiente</b>.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD20.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="7500" data-rotate="765">
+        <step>
+<p align="justify">
+Como
+resumen final de las opciones indicadas, se muestra una ventana informativa con
+todos los parámetros seleccionados a través del asistente de instalación de
+<i>Active Directory</i>, en la cual pulsaremos sobre el botón <b>Siguiente</b>
+para dar comienzo efectivo a dicho proceso de instalación y configuración.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD21.jpg" height="489" width="540" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="1500" data-y="9000" data-rotate="810">
+        <step>
+<p align="justify">
+A
+partir de este momento dará comienzo la instalación y configuración de <i>Active
+Directory</i> en el equipo "SERVIDOR", tal y como vemos en la siguiente
+imagen; en dicha ventana activaremos la casilla <b>Reiniciar al completar</b> para
+que al completarse en su totalidad la instalación y configuración del servicio, el equipo se
+reinicie y el servicio pase a ser plenamente funcional.
+</p>
+
+<div>
+</div>
+
+
+<p align="center">
+<img src="pictures/5DirectorioActivo/AD22.jpg" height="306" width="437" /> 
+</p>
+
+
+<div>
+</div>
+
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="9000" data-rotate="855">
+        <step>
+<p align="justify">
+Tras
+el correspondiente reinicio, el equipo "SERVIDOR" pasará a realizar
+las funciones de controlador de dominio del dominio "micentro.edu"
+</p>
+</step>
+      </div>
+      <div class="step" data-x="4500" data-y="9000" data-rotate="900">
+        <step>
+<center><h1>Credits.</h1></center>
+<h3>Adapted from:</h3>
+<a href="http://www.ite.educacion.es/formacion/materiales/85/cd/index.htm" target="_blank">
+Curso Aulas en red, aplicaciones y servicios</a>
+<h3>License:</h3>
+<a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">
+Creative Commons Attribution-ShareAlike 3.0  (CC BY-SA 3.0)</a>
+<h3>Created with:</h3>
+<a href="https://github.com/rggarcia/XMLimpress" target="_blank">
+XMLimpress</a> (see examples/example_big_slide.xml)
+</step>
+      </div>
+    </div>
+  </body>
+</html>

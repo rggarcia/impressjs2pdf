@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script>
+		window.addEventListener("impress:stepleave", function (event) {
+ 			document.getElementById("header").innerHTML="";
+	        }, false);
+		window.addEventListener("impress:stepenter", function (event) {
+			document.getElementById("header").innerHTML="- "+event.target.id.slice(5)+" -";
+		}, false);
+	</script>
+    <style>
+.step {
+	width: 1000px;
+	font-size: x-large;
+}
+
+		#header {
+			witdh:100%;
+			text-align:center;
+			color: gray;
+		}
+	</style>
+    <title>
+Conceptos directorio activo
+</title>
+  </head>
+  <body onload="impress().init();">
+    <script src="impress.js"></script>
+    <div id="header"></div>
+    <div id="impress">
+      <div class="step" data-x="1000" data-y="0" data-rotate="0">
+        <step>
+<h1>¿Qué es el Directorio Activo?</h1>
+</step>
+      </div>
+      <div class="step" data-x="2000" data-y="0" data-rotate="45">
+        <step>
+es la pieza clave del sistema operativo <i>Windows Server</i>
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="0" data-rotate="90">
+        <step>
+proporciona la capacidad de establecer un único inicio de sesión y un repositorio
+central de información para toda su infraestructura
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="0" data-rotate="90">
+        <step>
+<h1>Terminología a conocer:</h1>
+</step>
+      </div>
+      <div class="step" data-x="1000" data-y="1000" data-rotate="135">
+        <step>
+<h1>Controlador de Dominio.</h1>
+Es un equipo <i>Windows Server </i>con Active Directory instalado que
+almacena, mantiene y gestiona la base de datos de usuarios y recursos de la red.
+</step>
+      </div>
+      <div class="step" data-x="2000" data-y="1000" data-rotate="180">
+        <step>
+<h1> Nombre de Dominio.</h1>
+Son las denominaciones asignadas a los equipos de la red. Por ejemplo
+MICENTRO.EDU
+</step>
+      </div>
+      <div class="step" data-x="3000" data-y="1000" data-rotate="225">
+        <step>
+<h1> Árbol de Dominio.</h1>
+Es el conjunto de dominios formado por el
+nombre de dominio raíz (MICENTRO.EDU) y el resto de dominios cuyos
+nombres constituyen un espacio contiguo con el nombre raíz (por ejemplo
+DPTO_LENGUA.MICENTRO.EDU).
+</step>
+      </div>
+      <div class="step" data-x="0" data-y="1000" data-rotate="225">
+        <step>
+<h1> Bosque de Árboles de Dominios.</h1>
+Es el conjunto de árboles de
+dominio que no constituyen un espacio de nombres contiguo (por ejemplo
+MICENTRO.EDU y OTROCENTRO.EDU, que están conectados en la misma red).
+</step>
+      </div>
+      <div class="step" data-x="1000" data-y="2000" data-rotate="270">
+        <step>
+<h1>Esquema.</h1>
+<center>
+<img src="pictures/5DirectorioActivo/AD01.jpg" width="694" /> 
+</center>
+</step>
+      </div>
+      <div class="step" data-x="2000" data-y="2000" data-rotate="315">
+        <step>
+<center><h1>Credits.</h1></center>
+<h3>Adapted from:</h3>
+<a href="http://www.ite.educacion.es/formacion/materiales/85/cd/index.htm" target="_blank">
+Curso Aulas en red, aplicaciones y servicios</a>
+<h3>License:</h3>
+<a href="http://creativecommons.org/licenses/by-sa/3.0/" target="_blank">
+Creative Commons Attribution-ShareAlike 3.0  (CC BY-SA 3.0)</a>
+<h3>Created with:</h3>
+<a href="https://github.com/rggarcia/XMLimpress" target="_blank">
+XMLimpress</a> (see examples/example_small_slide.xml)
+</step>
+      </div>
+    </div>
+  </body>
+</html>
